@@ -1,0 +1,7 @@
+# predictability_aware_ofdm.yaml evaluated without per-trajectory power normalisation: the SNR is then the
+# long-term average, so slow fading between trajectories stays in the data.
+includes: [predictability_aware_ofdm.yaml]
+channel:
+  power_normalisation: none
+experiment:
+  name: predictability_aware_ofdm_global_power

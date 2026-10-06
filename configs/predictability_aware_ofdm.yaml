@@ -1,0 +1,4 @@
+# Full-scale predictability-aware OFDM configuration shared by experiment commands.
+includes: [base.yaml, channel.yaml, model_ftheta.yaml, model_gphi.yaml]
+experiment:
+  name: predictability_aware_ofdm

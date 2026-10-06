@@ -1,0 +1,8 @@
+channel:
+  backend: sionna
+  profiles: [A, B, C, D]
+  delay_spread: 1.0e-7
+  delay_spread_range_ns: [30.0, 300.0]
+  velocity_jitter: 0.25
+  velocity_segments: 3
+  nr_config_type: 1

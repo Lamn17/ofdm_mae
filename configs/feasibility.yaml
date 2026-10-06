@@ -1,0 +1,11 @@
+includes: [base.yaml, channel.yaml, model_ftheta.yaml, model_gphi.yaml]
+data:
+  frames_per_traj: 16
+  test_ids: [850, 900]
+model_gphi:
+  predictor_samples: 8192
+experiment:
+  name: feasibility
+  eval_profiles: [C]
+  velocities: [3, 60, 120]
+  diagnostic_trajectories: 20

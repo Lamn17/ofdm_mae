@@ -1,0 +1,58 @@
+numerology:
+  fc_hz: 3.5e+9
+  scs_hz: 3.0e+4
+  n_f: 48
+  n_t: 14
+  frame_dur_s: 5.0e-4
+  cp_len_ratio: 0.07142857142857142
+
+data:
+  frames_per_traj: 64
+  train_ids: [0, 700]
+  val_ids: [700, 850]
+  test_ids: [850, 1000]
+
+features:
+  W: 4
+  B: 8
+
+link:
+  snrs: [15, 20, 25, 30]
+  training_snrs: [-5, 0, 5, 10, 15, 20, 25, 30]
+  modulations: [4, 16]
+  target_bler: 0.01
+  target_ber: 0.001
+  code_interleaver: true
+
+signaling:
+  kappa: [1.0, 3.0, 6.0]
+  budget_levels: [0.5, 0.375, 0.25, 0.1875, 0.125, 0.09375, 0.0625, 0.03125, 0.015625, 0.0078125]
+  G_groups: 12
+  levels_per_group: 4
+
+control:
+  d_frames: [0, 1, 2]
+  olla_up: 0.1
+  olla_down: 0.01
+  closed_loop_warmup: 20
+
+runtime:
+  seeds: [0, 1, 2]
+  device: auto
+  threads: 4
+  calibration_blocks: 500
+  calibration_source: cdl
+  calibration_trajectories: 64
+  pi_bins: 5
+  pi_binning: quantile
+
+experiment:
+  densities: [0.0078125, 0.015625, 0.03125, 0.0625, 0.125, 0.25, 0.5]
+  eval_profiles: [A, C]
+  velocities: [3, 30, 60, 120]
+  diagnostic_snrs: [15, 20, 25, 30]
+  diagnostic_densities: [0.5, 0.75, 0.875]
+  diagnostic_trajectories: 50
+  controller_variants: [S1, NR]
+  transfer_fractions: [0.01, 0.05, 0.25, 1.0]
+  run_transfer: false

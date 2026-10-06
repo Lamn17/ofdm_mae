@@ -1,0 +1,6 @@
+model_gphi:
+  predictor_epochs: 60
+  predictor_samples: 200000
+  oracle_candidates: 32
+  spacing_f: 2
+  spacing_t: 1

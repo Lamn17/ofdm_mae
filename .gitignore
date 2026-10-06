@@ -1,0 +1,28 @@
+# Python environments, tests, and generated build files
+.venv/
+.venv-*/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+/tests/
+/build/
+/dist/
+*.whl
+.coverage
+coverage.xml
+
+# Simulation outputs, model checkpoints, and cached channel trajectories
+runs/
+cache/
+results/
+outputs/
+*.pt
+*.pth
+*.npy
+*.npz
+
+# Local credentials
+.env
+.env.*
