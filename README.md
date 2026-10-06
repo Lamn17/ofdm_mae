@@ -20,7 +20,7 @@ The predictability index combines temporal and frequency correlation maps over
 the past `W` frames and a `B`-subcarrier window:
 
 $$
-\Pi = \operatorname{mean}_{k,t}\left[\rho_t(k,t)\,\rho_f(k,t)\right]
+\Pi = \mathrm{mean}_{k,t}\left[\rho_t(k,t)\,\rho_f(k,t)\right]
 $$
 
 `Pi_H` uses the true past CSI (design-time bucketing); `Pi_hat` uses estimated
